@@ -1,0 +1,2 @@
+config SHIELD_DONUT_UNIBODY
+    def_bool $(shields_list_contains, donut_unibody)
