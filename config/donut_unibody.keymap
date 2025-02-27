@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <32 33 34>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
