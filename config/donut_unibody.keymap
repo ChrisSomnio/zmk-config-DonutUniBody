@@ -67,17 +67,17 @@
 
         numbers {
             bindings = <
-         &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp N8        &kp KP_NUMBER_9  &trans
-&kp TAB  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6     &trans  &trans
-         &trans  &trans  &trans  &trans  &trans    &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &trans
+         &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp N8        &kp N9        &trans
+&kp TAB  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+         &trans  &trans  &trans  &trans  &trans    &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
                          &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
 
         navigation_layer {
             bindings = <
-        &trans  &mkp MCLK       &mmv MOVE_UP    &mkp LCLK        &mkp RCLK    &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+        &trans  &mkp MCLK       &mmv MOVE_UP    &mkp LCLK        &mkp RCLK    &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp MINUS
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans
         &trans  &trans          &trans          &trans           &trans       &trans  &trans          &trans          &trans           &trans
                                 &trans          &trans           &trans       &trans  &trans          &trans
             >;
