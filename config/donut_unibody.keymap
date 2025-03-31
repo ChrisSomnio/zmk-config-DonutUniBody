@@ -94,10 +94,10 @@
 
         navigation_layer {
             bindings = <
-        &trans  &mkp MCLK       &mmv MOVE_UP    &mkp LCLK        &mkp RCLK    &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp MINUS
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans
-        &trans  &trans          &trans          &trans           &trans       &trans  &trans          &trans          &trans           &trans
-                                &trans          &to 0            &trans       &trans  &trans          &trans
+        &trans        &mkp MCLK       &mmv MOVE_UP    &mkp LCLK        &mkp RCLK    &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp MINUS
+&trans  &bt BT_SEL 1  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans
+        &bt BT_SEL 0  &trans          &trans          &trans           &trans       &trans  &trans          &trans          &trans           &trans
+                                      &trans          &to 0            &trans       &trans  &trans          &trans
             >;
         };
 
