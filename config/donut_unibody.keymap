@@ -77,10 +77,10 @@
 
         symbol_layer {
             bindings = <
-            &kp RA(RIGHT_BRACKET)  &kp LS(SLASH)  &kp RA(N8)    &kp RA(N9)    &kp GRAVE        &kp LS(NUMBER_1)  &kp NUBS    &kp LS(NUBS)  &kp LS(N0)    &kp LS(N6)
-&kp DELETE  &kp RA(MINUS)          &kp LS(N7)     &kp RA(N7)    &kp RA(N0)    &kp RS(RBRC)     &kp LS(MINUS)     &kp LS(N8)  &kp LS(N9)    &kp SLASH     &kp LS(DOT)    &kp RA(Q)
-            &kp NUHS               &kp LS(N4)     &kp RA(NUBS)  &kp RA(RBRC)  &kp LS(EQUAL)    &kp LS(N5)        &kp RBRC    &kp LS(N2)    &kp LS(NUHS)  &kp LS(COMMA)
-                                                  &trans        &to 0         &trans           &trans            &sl 2       &sl 3
+            &kp RIGHT_BRACKET  &kp LS(SLASH)  &kp RA(N8)    &kp RA(N9)    &kp GRAVE        &kp LS(NUMBER_1)  &kp NUBS    &kp LS(NUBS)  &kp LS(N0)    &kp LS(N6)
+&kp DELETE  &kp RA(MINUS)      &kp LS(N7)     &kp RA(N7)    &kp RA(N0)    &kp RS(RBRC)     &kp LS(MINUS)     &kp LS(N8)  &kp LS(N9)    &kp SLASH     &kp LS(DOT)    &kp RA(Q)
+            &kp NUHS           &kp LS(N4)     &kp RA(NUBS)  &kp RA(RBRC)  &kp LS(EQUAL)    &kp LS(N5)        &kp RBRC    &kp LS(N2)    &kp LS(NUHS)  &kp LS(COMMA)
+                                              &trans        &to 0         &trans           &trans            &sl 2       &sl 3
             >;
         };
 
