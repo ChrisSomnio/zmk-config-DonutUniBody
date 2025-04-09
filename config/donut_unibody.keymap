@@ -126,10 +126,10 @@
 
         system_layer {
             bindings = <
-        &trans  &kt LEFT_ALT  &kp TAB  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans        &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                              &trans   &trans  &trans    &trans  &trans  &trans
+        &trans  &kt LEFT_ALT  &kp TAB  &trans  &kp K_LOCK    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans   &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans        &trans   &trans  &trans        &trans  &trans  &trans  &trans  &trans
+                              &trans   &trans  &trans        &trans  &trans  &trans
             >;
         };
     };
