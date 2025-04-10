@@ -56,6 +56,8 @@
             label = "STRG_DANCE";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&mo 5>;
+
+            tapping-term-ms = <350>;
         };
 
         shift_dance: shift_dance {
