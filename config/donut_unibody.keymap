@@ -28,21 +28,21 @@
 
         default_layer {
             bindings = <
-&kp E  &kp A  &kp I         &kp U   &kp O         &kp NUMBER_1  &kp K         &kp H         &kp G         &kp F         &kp Q  &kp N8
-&kp X  &kp V  &kp L         &kp C   &kp E         &kp NUMBER_2  &kp S         &kp N         &kp R         &kp T         &kp D  &kp Y
-&kp P  &kp Z  &kp NUMBER_6  &kp N5  &kp NUMBER_4  &kp NUMBER_3  &kp B         &kp M         &kp COMMA     &kp PERIOD    &kp J  &kp N7
-              &kp N7        &kp N8                                                          &kp N5        &kp NUMBER_6
-                            &kp N9  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4
+&kp E  &kp A  &kp I         &kp U   &kp O         &kp NUMBER_1  &kp K         &kp H         &kp G      &kp F         &kp Q  &kp N8
+&kp X  &kp V  &kp L         &kp C   &kp E         &kp NUMBER_2  &kp S         &kp N         &kp R      &kp T         &kp D  &kp Y
+&kp P  &kp Z  &kp NUMBER_6  &kp N5  &kp NUMBER_4  &kp NUMBER_3  &kp B         &kp M         &kp COMMA  &kp PERIOD    &kp J  &kp N7
+              &kp N7        &kp N8                                                          &kp N5     &kp NUMBER_6
+                            &mo 1   &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans                                  &trans  &trans
-                        &trans  &kp A   &kp B   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                &trans  &trans                                        &trans        &trans
+                        &trans  &kp A   &kp B   &trans  &trans        &trans
             >;
         };
 
