@@ -20,6 +20,17 @@
             bindings = <&to 4>;
             key-positions = <35 36 37>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <12 13>;
+            require-prior-idle-ms = <0>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 14>;
+        };
     };
 
     behaviors {
