@@ -29,7 +29,17 @@
 
         Tab {
             bindings = <&kp TAB>;
-            key-positions = <13 14>;
+            key-positions = <12 11>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <14 13>;
+        };
+
+        Entf {
+            bindings = <&kp DELETE>;
+            key-positions = <1 2>;
         };
     };
 
