@@ -23,7 +23,7 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <2 3>;
+            key-positions = <23 24>;
             require-prior-idle-ms = <0>;
         };
 
