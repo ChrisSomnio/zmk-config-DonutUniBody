@@ -23,23 +23,28 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <12 13>;
+            key-positions = <2 3>;
             require-prior-idle-ms = <0>;
         };
 
         Tab {
             bindings = <&kp TAB>;
-            key-positions = <12 11>;
+            key-positions = <0 1>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <14 13>;
+            key-positions = <24 25>;
         };
 
         Entf {
             bindings = <&kp DELETE>;
             key-positions = <1 2>;
+        };
+
+        NumberComboLayer {
+            bindings = <&mo 2>;
+            key-positions = <34 10>;
         };
     };
 
