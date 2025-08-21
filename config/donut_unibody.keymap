@@ -28,7 +28,7 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp J  &kp D   &kp U             &kp A             &kp X          &kp P          &kp H      &kp L      &kp M         &kp W  &kp N8
+&kp ESCAPE      &kp J  &kp D   &kp U             &kp A             &kp X          &kp P          &kp H      &kp L      &kp M         &kp W  &kp MINUS
 &kp TAB         &kp C  &kp T   &kp I             &kp E             &kp O          &kp B          &kp N      &kp R      &kp S         &kp G  &kp Y
 &kp LEFT_SHIFT  &kp F  &kp V   &kp LEFT_BRACKET  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp Z          &kp Y      &kp COMMA  &kp PERIOD    &kp K  &kp RSHFT
                        &kp N7  &kp N8                                                                       &kp N5     &kp NUMBER_6
