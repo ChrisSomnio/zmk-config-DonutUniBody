@@ -100,6 +100,29 @@
             #binding-cells = <0>;
             bindings = <&none>, <&kp K_COFFEE>;
         };
+
+        windows_desktop_tap_dance: windows_desktop_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WINDOWS_DESKTOP_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&windows_desktop_right>, <&windows_desktop_left>;
+        };
+    };
+
+    macros {
+        windows_desktop_left: windows_virtual_desktop_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp LCTRL &kp LEFT>;
+            label = "WINDOWS_VIRTUAL_DESKTOP_LEFT";
+        };
+
+        windows_desktop_right: windows_desktop_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp LCTRL &kp RIGHT>;
+            label = "WINDOWS_DESKTOP_RIGHT";
+        };
     };
 
     keymap {
@@ -107,11 +130,11 @@
 
         default_layer {
             bindings = <
-                   &kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0
-&hml_mo_lay 4 ESC  &kp X             &kp V            &kp L             &kp C             &kp W         &kp K            &kp H         &kp G         &kp F             &kp Q             &kp MINUS
-&hml_mo_lay 3 TAB  &hml LEFT_GUI U   &hml LEFT_ALT I  &kp A             &kp E             &kp O         &kp S            &kp N         &kp R         &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
-                   &kp LEFT_BRACKET  &kp SEMICOLON    &kp SINGLE_QUOTE  &kp P             &kp Y         &kp B            &kp M         &kp COMMA     &kp PERIOD        &kp J
-&kp PRINTSCREEN    &none             &mo 2            &kp LEFT_ALT      &kp LEFT_CONTROL  &kp SPACE     &kp RIGHT_SHIFT  &sl 1         &kp ENTER     &none             &kp LEFT_SHIFT    &TopRightDance
+                   &kp NUMBER_1                &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0
+&hml_mo_lay 4 ESC  &kp X                       &kp V            &kp L             &kp C             &kp W         &kp K            &kp H         &kp G         &kp F             &kp Q             &kp MINUS
+&hml_mo_lay 3 TAB  &hml LEFT_GUI U             &hml LEFT_ALT I  &kp A             &kp E             &kp O         &kp S            &kp N         &kp R         &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
+                   &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE  &kp P             &kp Y         &kp B            &kp M         &kp COMMA     &kp PERIOD        &kp J
+&kp PRINTSCREEN    &windows_desktop_tap_dance  &mo 2            &kp LEFT_ALT      &kp LEFT_CONTROL  &kp SPACE     &kp RIGHT_SHIFT  &sl 1         &kp ENTER     &none             &kp LEFT_SHIFT    &TopRightDance
             >;
         };
 
@@ -121,7 +144,7 @@
 &none       &kp RIGHT_BRACKET  &kp LS(SLASH)  &kp RA(N8)    &kp RA(N9)    &kp GRAVE      &kp LS(NUMBER_1)  &kp NUBS           &kp LS(NUBS)  &kp LS(N0)    &kp LS(N6)     &none
 &kp DELETE  &kp RA(MINUS)      &kp LS(N7)     &kp RA(N7)    &kp RA(N0)    &kp RS(RBRC)   &kp LS(MINUS)     &kp LS(N8)         &kp LS(N9)    &kp SLASH     &kp LS(DOT)    &kp RA(Q)
             &kp NUHS           &kp LS(N4)     &kp RA(NUBS)  &kp RA(RBRC)  &kp LS(EQUAL)  &kp LS(N5)        &kp RIGHT_BRACKET  &kp LS(N2)    &kp LS(NUHS)  &kp LS(COMMA)
-&none       &none              &none          &none         &to 0         &to 0          &none             &sl 2              &sl 0         &none         &none          &none
+&none       &none              &none          &trans        &to 0         &to 0          &none             &sl 2              &sl 0         &none         &none          &none
             >;
         };
 
