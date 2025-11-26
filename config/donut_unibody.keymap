@@ -20,6 +20,16 @@
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
         };
+
+        BT0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <5 6>;
+        };
+
+        BT1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <3 4>;
+        };
     };
 
     behaviors {
@@ -114,9 +124,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LEFT_WIN &kp LCTRL>,
-                <&macro_tap &kp LEFT>,
-                <&macro_release &kp LEFT_WIN &kp LCTRL>;
+                <&macro_press>,
+                <&kp LEFT_WIN &kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_WIN &kp LCTRL>;
 
             label = "WINDOWS_VIRTUAL_DESKTOP_LEFT";
         };
@@ -125,9 +138,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LEFT_WIN &kp LCTRL>,
-                <&macro_tap &kp RIGHT>,
-                <&macro_release &kp LEFT_WIN &kp LCTRL>;
+                <&macro_press>,
+                <&kp LEFT_WIN &kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_WIN &kp LCTRL>;
 
             label = "WINDOWS_DESKTOP_RIGHT";
         };
@@ -142,7 +158,7 @@
 &hml_mo_lay 4 ESC  &kp X                       &kp V            &kp L             &kp C             &kp W         &kp K            &kp H         &kp G         &kp F             &kp Q             &kp MINUS
 &hml_mo_lay 3 TAB  &hml LEFT_GUI U             &hml LEFT_ALT I  &kp A             &kp E             &kp O         &kp S            &kp N         &kp R         &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
                    &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE  &kp P             &kp Y         &kp B            &kp M         &kp COMMA     &kp PERIOD        &kp J
-&kp PRINTSCREEN    &windows_desktop_tap_dance  &mo 2            &kp LEFT_ALT      &kp LEFT_CONTROL  &kp SPACE     &kp RIGHT_SHIFT  &sl 1         &kp ENTER     &none             &kp LEFT_SHIFT    &TopRightDance
+&kp PRINTSCREEN    &windows_desktop_tap_dance  &mo 2            &kp LEFT_ALT      &kp LEFT_CONTROL  &kp SPACE     &kp RIGHT_SHIFT  &mo 1         &kp ENTER     &none             &kp LEFT_SHIFT    &TopRightDance
             >;
         };
 
