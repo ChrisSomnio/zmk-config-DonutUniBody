@@ -155,21 +155,38 @@
         npm_build_dev: npm_build_dev {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N &kp P &kp M &kp SPACE &kp C &kp I &kp RET &kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp MINUS &kp L &kp I &kp N &kp K &kp RET &kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp MINUS &kp D &kp E &kp V &kp RET>;
+            bindings =
+                <&kp N &kp P &kp M &kp SPACE &kp C &kp I &kp RET>,
+                <&macro_wait_time 10>,
+                <&kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp SLASH &kp L &kp I &kp N &kp K &kp RET>,
+                <&macro_wait_time 10>,
+                <&kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp SLASH &kp D &kp E &kp V &kp RET>,
+                <&macro_release>;
+
             label = "NPM_BUILD_DEV";
         };
 
         npm_link_ksoft_web1: npm_link_ksoft_web {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N &kp P &kp M &kp SPACE &kp C &kp I &kp RET &kp N &kp P &kp M &kp SPACE &kp L &kp I &kp N &kp K &kp SPACE &kp K &kp O &kp S &kp F &kp T &kp MINUS &kp W &kp E &kp B &kp MINUS>;
+            bindings =
+                <&none &kp N &kp P &kp M &kp SPACE &kp C &kp I &kp RET>,
+                <&macro_wait_time 10>,
+                <&kp N &kp P &kp M &kp SPACE &kp L &kp I &kp N &kp K &kp SPACE &kp K &kp S &kp O &kp F &kp T &kp SLASH &kp W &kp E &kp B &kp SLASH>,
+                <&macro_release>;
+
             label = "NPM_LINK_KSOFT_WEB";
         };
 
         npm_link_ksoft_web2: npm_link_ksoft_web2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp RET &kp N &kp G &kp SPACE &kp S &kp E &kp R &kp V &kp E &kp SPACE &kp MINUS &kp O &kp RET>;
+            bindings =
+                <&none &kp RET>,
+                <&macro_wait_time 10>,
+                <&kp N &kp G &kp SPACE &kp S &kp E &kp R &kp V &kp E &kp SPACE &kp SLASH &kp O &kp RET>,
+                <&macro_release>;
+
             label = "NPM_LINK_KSOFT_WEB2";
         };
     };
