@@ -27,12 +27,12 @@
 
         BT0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <5 6>;
+            key-positions = <2 3>;
         };
 
         BT1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <3 4>;
+            key-positions = <3 1>;
         };
     };
 
@@ -189,6 +189,13 @@
 
             label = "NPM_LINK_KSOFT_WEB2";
         };
+
+        language_macro: language_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp L &kp RET &kp SPACE &kp R &kp O &kp RET &kp SPACE &kp S &kp E &kp RET>;
+            label = "LANGUAGE_MACRO";
+        };
     };
 
     keymap {
@@ -236,11 +243,11 @@
 
         Navigation_Layer {
             bindings = <
-        &bt BT_SEL 3  &trans  &trans  &trans  &bt BT_CLR  &trans          &trans                &trans                &trans  &trans
-&trans  &bt BT_SEL 2  &trans  &trans  &trans  &trans      &npm_build_dev  &npm_link_ksoft_web1  &npm_link_ksoft_web2  &trans  &trans  &trans
-&trans  &bt BT_SEL 1  &trans  &trans  &trans  &trans      &trans          &trans                &trans                &trans  &trans  &trans
-        &bt BT_SEL 0  &trans  &trans  &trans  &trans      &trans          &trans                &trans                &trans  &trans
-&trans  &trans        &trans  &trans  &trans  &trans      &trans          &trans                &trans                &trans  &trans  &trans
+        &bt BT_SEL 3  &trans  &trans  &trans  &bt BT_CLR  &trans           &trans                &trans                &trans  &trans
+&trans  &bt BT_SEL 2  &trans  &trans  &trans  &trans      &npm_build_dev   &npm_link_ksoft_web1  &npm_link_ksoft_web2  &trans  &trans  &trans
+&trans  &bt BT_SEL 1  &trans  &trans  &trans  &trans      &trans           &trans                &trans                &trans  &trans  &trans
+        &bt BT_SEL 0  &trans  &trans  &trans  &trans      &language_macro  &trans                &trans                &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &trans      &trans           &trans                &trans                &trans  &trans  &trans
             >;
         };
     };
