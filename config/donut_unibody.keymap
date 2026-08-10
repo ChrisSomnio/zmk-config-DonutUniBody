@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -9,6 +11,16 @@
             bindings = <&bootloader>;
             key-positions = <41 40 42>;
         };
+
+        Bluetooth1 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <35 11 23>;
+        };
+
+        Bluetoothcombo {
+            bindings = <&mo 3>;
+            key-positions = <43 44 45>;
+        };
     };
 
     keymap {
@@ -16,11 +28,41 @@
 
         default_layer {
             bindings = <
-&kp E  &kp A  &kp I         &kp U   &kp O         &kp NUMBER_1  &kp K         &kp H         &kp G         &kp F         &kp Q  &kp N8
-&kp X  &kp V  &kp L         &kp C   &kp W         &kp NUMBER_2  &kp S         &kp N         &kp R         &kp T         &kp D  &kp Y
-&kp P  &kp Z  &kp NUMBER_6  &kp N5  &kp NUMBER_4  &kp NUMBER_3  &kp B         &kp M         &kp COMMA     &kp PERIOD    &kp J  &kp N7
-              &kp N7        &kp N8                                                          &kp N5        &kp NUMBER_6
-                            &kp N9  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4
+&kp ESCAPE      &kp J  &kp D   &kp U             &kp A             &kp X          &kp P          &kp H      &kp L      &kp M         &kp W  &kp MINUS
+&kp TAB         &kp C  &kp T   &kp I             &kp E             &kp O          &kp B          &kp N      &kp R      &kp S         &kp G  &kp Q
+&kp LEFT_SHIFT  &kp F  &kp V   &kp LEFT_BRACKET  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp Z          &kp Y      &kp COMMA  &kp PERIOD    &kp K  &kp RSHFT
+                       &kp N7  &kp N8                                                                       &kp N5     &kp NUMBER_6
+                               &mo 1             &mo 2             &kp LEFT_ALT   &kp BACKSPACE  &kp SPACE  &kp ENTER
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans        &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                &trans          &trans                                                               &kp COMMA     &kp PERIOD
+                                &trans          &trans           &trans  &kp NUMBER_0  &trans        &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &kp EXCLAMATION  &trans                &trans                 &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp COLON      &kp AT_SIGN
+&trans  &trans  &trans  &trans  &trans  &trans  &kp PLUS         &kp PERCENT           &trans                 &trans     &kp SEMICOLON  &trans
+                &trans  &trans                                                         &trans                 &trans
+                        &trans  &trans  &trans  &trans           &trans                &trans
+            >;
+        };
+
+        Bluetooth {
+            bindings = <
+&trans      &trans  &trans  &trans  &trans  &bt BT_SEL 2  &out OUT_BLE  &out OUT_USB  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &bt BT_SEL 1  &trans        &trans        &trans  &trans  &trans  &trans
+&bt BT_CLR  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &kp PLUS      &trans        &trans  &trans  &trans  &trans
+                    &trans  &trans                                                    &trans  &trans
+                            &trans  &trans  &trans        &trans        &trans        &trans
             >;
         };
     };
