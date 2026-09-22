@@ -151,7 +151,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_DANCE";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&to 2>, <&to 3>, <&to 4>;
+            bindings = <&mo 1>, <&mo 2>, <&mo 3>, <&mo 4>;
+
+            tapping-term-ms = <350>;
         };
 
         strg_dance_new: strg_dance_new {
