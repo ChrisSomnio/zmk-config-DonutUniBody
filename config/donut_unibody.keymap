@@ -54,6 +54,11 @@
             bindings = <&kp Z>;
             key-positions = <42 43>;
         };
+
+        EnterCombi {
+            bindings = <&kp ENTER>;
+            key-positions = <41 42>;
+        };
     };
 
     behaviors {
