@@ -34,6 +34,26 @@
             bindings = <&bt BT_SEL 1>;
             key-positions = <3 1>;
         };
+
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <12 11>;
+        };
+
+        Tab_combi {
+            bindings = <&kp TAB>;
+            key-positions = <34 35>;
+        };
+
+        sz_combi {
+            bindings = <&kp MINUS>;
+            key-positions = <19 20>;
+        };
+
+        y_combi {
+            bindings = <&kp Z>;
+            key-positions = <42 43>;
+        };
     };
 
     behaviors {
@@ -112,7 +132,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TOPRIGHTDANCE";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp K_COFFEE>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
         };
 
         windows_desktop_tap_dance: windows_desktop_tap_dance {
@@ -120,6 +140,22 @@
             label = "WINDOWS_DESKTOP_TAP_DANCE";
             #binding-cells = <0>;
             bindings = <&windows_desktop_right>, <&windows_desktop_left>;
+        };
+
+        layer_dance: layer_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_DANCE";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&to 2>, <&to 3>, <&to 4>;
+        };
+
+        strg_dance_new: strg_dance_new {
+            compatible = "zmk,behavior-tap-dance";
+            label = "STRG_DANCE_NEW";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&mo 2>, <&to 0>;
+
+            tapping-term-ms = <350>;
         };
     };
 
@@ -203,11 +239,11 @@
 
         default_layer {
             bindings = <
-                   &kp NUMBER_1                &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0
-&hml_mo_lay 4 ESC  &kp X                       &kp V            &kp L             &kp C             &kp W         &kp K            &kp H         &kp G         &kp F             &kp Q             &kp MINUS
-&hml_mo_lay 3 TAB  &hml LEFT_GUI U             &hml LEFT_ALT I  &kp A             &kp E             &kp O         &kp S            &kp N         &kp R         &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
-                   &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE  &kp P             &kp Y         &kp B            &kp M         &kp COMMA     &kp PERIOD        &kp J
-&kp PRINTSCREEN    &windows_desktop_tap_dance  &mo 2            &kp LEFT_ALT      &kp LEFT_CONTROL  &kp SPACE     &kp RIGHT_SHIFT  &mo 1         &kp ENTER     &mo 3             &kp LEFT_SHIFT    &TopRightDance
+                   &kp NUMBER_1                &kp NUMBER_2     &kp NUMBER_3      &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6     &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0
+&hml_mo_lay 4 ESC  &kp X                       &kp V            &kp L             &kp C            &kp W         &kp K            &kp H            &kp G         &kp F             &kp Q             &kp MINUS
+&hml_mo_lay 3 TAB  &hml LEFT_GUI U             &hml LEFT_ALT I  &kp A             &kp E            &kp O         &kp S            &kp N            &kp R         &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
+                   &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE  &kp P            &kp Y         &kp B            &kp M            &kp COMMA     &kp PERIOD        &kp J
+&kp PRINTSCREEN    &windows_desktop_tap_dance  &mo 2            &kp LEFT_ALT      &strg_dance_new  &kp SPACE     &kp RIGHT_SHIFT  &strg_dance_new  &kp ENTER     &mo 3             &kp LEFT_SHIFT    &TopRightDance
             >;
         };
 
