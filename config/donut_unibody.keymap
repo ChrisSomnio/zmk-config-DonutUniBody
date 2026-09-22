@@ -34,6 +34,16 @@
             bindings = <&bt BT_SEL 1>;
             key-positions = <3 1>;
         };
+
+        Y_combi {
+            bindings = <&kp Z>;
+            key-positions = <42 43>;
+        };
+
+        sz_combi {
+            bindings = <&kp MINUS>;
+            key-positions = <20 19>;
+        };
     };
 
     behaviors {
