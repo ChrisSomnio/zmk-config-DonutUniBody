@@ -30,30 +30,9 @@
             key-positions = <2 3>;
         };
 
-        BT1 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <3 1>;
-        };
-
-        Esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <12 11>;
-        };
-
-        Tab_combi {
-            bindings = <&Tab_arrow 3 TAB>;
-            key-positions = <34 35>;
-        };
-
         sz_combi {
             bindings = <&kp MINUS>;
             key-positions = <19 20>;
-        };
-
-        y_combi {
-            bindings = <&kp Z>;
-            key-positions = <42 43>;
-            layers = <0>;
         };
 
         EnterCombi {
@@ -61,10 +40,19 @@
             key-positions = <41 42>;
         };
 
-        Combi_AT {
-            bindings = <&kp RA(Q)>;
-            key-positions = <42 43>;
-            layers = <1>;
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <14 15>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <26 27>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <37 38>;
         };
     };
 
@@ -97,35 +85,6 @@
             require-prior-idle-ms = <150>;
         };
 
-        strg_dance: strg_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "STRG_DANCE";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&mo 0>;
-
-            tapping-term-ms = <350>;
-        };
-
-        shift_dance: shift_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_DANCE";
-            #binding-cells = <0>;
-            bindings = <&kp RSHFT>, <&kp CAPSLOCK>;
-        };
-
-        hml2: hml2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML2";
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 39 40 41 42 43 50 51 52 53 54 55>;
-            require-prior-idle-ms = <150>;
-            bindings = <&mo>, <&kp>;
-        };
-
         hml_mo_lay: hml_mo_lay {
             compatible = "zmk,behavior-hold-tap";
             label = "HML_MO_LAY";
@@ -154,24 +113,6 @@
             bindings = <&windows_desktop_right>, <&windows_desktop_left>;
         };
 
-        layer_dance: layer_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_DANCE";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 2>, <&mo 3>, <&mo 4>;
-
-            tapping-term-ms = <350>;
-        };
-
-        strg_dance_new: strg_dance_new {
-            compatible = "zmk,behavior-tap-dance";
-            label = "STRG_DANCE_NEW";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&mo 2>, <&to 0>;
-
-            tapping-term-ms = <350>;
-        };
-
         Tab_arrow: Tab_arrow {
             compatible = "zmk,behavior-hold-tap";
             label = "TAB_ARROW";
@@ -179,6 +120,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+        };
+
+        Tap_Layer: Tap_Layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -210,51 +160,6 @@
 
             label = "WINDOWS_DESKTOP_RIGHT";
         };
-
-        npm_build_dev: npm_build_dev {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp N &kp P &kp M &kp SPACE &kp C &kp I &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp SLASH &kp L &kp I &kp N &kp K &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp SLASH &kp D &kp E &kp V &kp RET>,
-                <&macro_release>;
-
-            label = "NPM_BUILD_DEV";
-        };
-
-        npm_link_ksoft_web1: npm_link_ksoft_web {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&none &kp N &kp P &kp M &kp SPACE &kp C &kp I &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp N &kp P &kp M &kp SPACE &kp L &kp I &kp N &kp K &kp SPACE &kp K &kp S &kp O &kp F &kp T &kp SLASH &kp W &kp E &kp B &kp SLASH>,
-                <&macro_release>;
-
-            label = "NPM_LINK_KSOFT_WEB";
-        };
-
-        npm_link_ksoft_web2: npm_link_ksoft_web2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&none &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp N &kp G &kp SPACE &kp S &kp E &kp R &kp V &kp E &kp SPACE &kp SLASH &kp O &kp RET>,
-                <&macro_release>;
-
-            label = "NPM_LINK_KSOFT_WEB2";
-        };
-
-        language_macro: language_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp L &kp RET &kp SPACE &kp R &kp O &kp RET &kp SPACE &kp S &kp E &kp RET>;
-            label = "LANGUAGE_MACRO";
-        };
     };
 
     keymap {
@@ -262,11 +167,11 @@
 
         default_layer {
             bindings = <
-                   &none                       &none            &none             &none             &none      &none            &none         &none      &none             &none
-&none              &kp X                       &kp V            &kp L             &kp C             &kp W      &kp K            &kp H         &kp G      &kp F             &kp Q             &none
-&hml_mo_lay 3 ESC  &hml LEFT_GUI U             &hml LEFT_ALT I  &kp A             &kp E             &kp O      &kp S            &kp N         &kp R      &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
-                   &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE  &kp P             &kp Y      &kp B            &kp M         &kp COMMA  &kp PERIOD        &kp J
-&kp PRINTSCREEN    &windows_desktop_tap_dance  &none            &mo 2             &kp LEFT_CONTROL  &kp SPACE  &kp RIGHT_SHIFT  &layer_dance  &mo 3      &none             &kp LEFT_SHIFT    &TopRightDance
+                   &none                       &none            &none                &none               &none      &none                   &none                &none                 &none             &none
+&none              &kp X                       &kp V            &kp L                &kp C               &kp W      &kp K                   &kp H                &kp G                 &kp F             &kp Q             &none
+&hml_mo_lay 3 ESC  &hml LEFT_GUI U             &hml LEFT_ALT I  &hml A LEFT_CONTROL  &hml E LEFT_SHIFT   &kp O      &kp S                   &hmr N RIGHT_SHIFT   &hmr R RIGHT_CONTROL  &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
+                   &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE     &kp P               &kp Y      &kp B                   &kp M                &kp COMMA             &kp PERIOD        &kp J
+&kp PRINTSCREEN    &windows_desktop_tap_dance  &none            &Tap_Layer 2 TAB     &Tap_Layer 3 ENTER  &kp SPACE  &Tap_Layer 2 BACKSPACE  &Tap_Layer 1 DELETE  &mo 3                 &none             &kp LEFT_SHIFT    &TopRightDance
             >;
         };
 
@@ -280,7 +185,7 @@
             >;
         };
 
-        number_and_arrow {
+        number {
             bindings = <
         &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
