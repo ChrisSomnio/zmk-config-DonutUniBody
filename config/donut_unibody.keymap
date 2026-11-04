@@ -169,9 +169,9 @@
             bindings = <
                    &none                       &none            &none                &none               &none      &none                   &none                &none                 &none             &none
 &none              &kp X                       &kp V            &kp L                &kp C               &kp W      &kp K                   &kp H                &kp G                 &kp F             &kp Q             &none
-&hml_mo_lay 3 ESC  &hml LEFT_GUI U             &hml LEFT_ALT I  &hml A LEFT_CONTROL  &hml E LEFT_SHIFT   &kp O      &kp S                   &hmr N RIGHT_SHIFT   &hmr R RIGHT_CONTROL  &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
+&hml_mo_lay 3 ESC  &hml LEFT_GUI U             &hml LEFT_ALT I  &hml LEFT_CONTROL A  &hml LEFT_SHIFT E   &kp O      &kp S                   &hmr RIGHT_SHIFT N   &hmr RIGHT_CONTROL R  &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
                    &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE     &kp P               &kp Y      &kp B                   &kp M                &kp COMMA             &kp PERIOD        &kp J
-&kp PRINTSCREEN    &windows_desktop_tap_dance  &none            &Tap_Layer 2 TAB     &Tap_Layer 3 ENTER  &kp SPACE  &Tap_Layer 2 BACKSPACE  &Tap_Layer 1 DELETE  &mo 3                 &none             &kp LG(L)    &TopRightDance
+&kp PRINTSCREEN    &windows_desktop_tap_dance  &none            &Tap_Layer 2 TAB     &Tap_Layer 3 ENTER  &kp SPACE  &Tap_Layer 2 BACKSPACE  &Tap_Layer 1 DELETE  &mo 3                 &none             &kp LG(L)         &TopRightDance
             >;
         };
 
@@ -197,11 +197,11 @@
 
         arrow_layer {
             bindings = <
-        &trans  &trans          &mkp MCLK       &trans           &trans          &trans        &trans      &trans        &trans       &trans
-&trans  &trans  &trans          &mmv MOVE_UP    &mkp LCLK        &mkp RCLK       &kp C_MUTE    &kp HOME    &kp END       &kp PAGE_UP  &kp PAGE_DOWN  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &kp C_VOL_UP  &kp LEFT    &kp UP_ARROW  &kp DOWN     &kp RIGHT      &trans
-        &trans  &trans          &trans          &trans           &msc SCRL_DOWN  &kp C_VOL_DN  &kp C_PP    &kp C_PREV    &kp C_NEXT   &trans
-&trans  &trans  &trans          &trans          &trans           &to 0           &to 3         &trans      &trans        &trans       &to 0          &trans
+        &trans  &trans          &mkp MCLK       &trans           &trans          &trans        &trans    &trans        &trans       &trans
+&trans  &trans  &trans          &mmv MOVE_UP    &mkp LCLK        &mkp RCLK       &kp C_MUTE    &kp HOME  &kp END       &kp PAGE_UP  &kp PAGE_DOWN  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &kp C_VOL_UP  &kp LEFT  &kp UP_ARROW  &kp DOWN     &kp RIGHT      &trans
+        &trans  &trans          &trans          &trans           &msc SCRL_DOWN  &kp C_VOL_DN  &kp C_PP  &kp C_PREV    &kp C_NEXT   &trans
+&trans  &trans  &trans          &trans          &trans           &to 0           &to 3         &trans    &trans        &trans       &to 0          &trans
             >;
         };
 
