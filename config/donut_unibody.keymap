@@ -44,10 +44,11 @@
     quick-release;
 };
 
-// Maus: langsamer Start für präzise Bewegungen, beschleunigt bis zur Höchstgeschwindigkeit
+// Maus: schnelles Ansprechen. Für mehr Präzision time-to-max-speed-ms erhöhen,
+// für mehr Tempo ZMK_POINTING_DEFAULT_MOVE_VAL oben erhöhen
 &mmv {
-    time-to-max-speed-ms = <600>;
-    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <250>;
+    acceleration-exponent = <1>;
 };
 
 / {
@@ -185,6 +186,18 @@
             quick-tap-ms = <150>;
         };
 
+        // Maus-Ebene auf Tab: schaltet sofort um, sobald eine rechte Taste gedrückt wird
+        // (nicht erst nach Loslassen oder 200 ms). Linke Tasten direkt nach Tab bleiben normales Tippen.
+        lt_mouse: lt_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <KEYS_R THUMBS_R>;
+        };
+
         // Halten = Ebene, Tippen = nur die nächste Taste aus der Ebene (Aufruf: &lt_sl 1 1)
         lt_sl: lt_sl {
             compatible = "zmk,behavior-hold-tap";
@@ -237,7 +250,7 @@
 &none              &kp X                       &kp V            &kp L                &kp C               &kp W      &kp K            &kp H                &kp G                 &kp F             &kp Q             &none
 &hml_mo_lay 3 ESC  &hml LEFT_GUI U             &hml LEFT_ALT I  &hml LEFT_CONTROL A  &hml LEFT_SHIFT E   &kp O      &kp S            &hmr RIGHT_SHIFT N   &hmr RIGHT_CONTROL R  &hmr RIGHT_ALT T  &hmr RIGHT_GUI D  &kp Z
                    &kp LEFT_BRACKET            &kp SEMICOLON    &kp SINGLE_QUOTE     &kp P               &kp Y      &kp B            &kp M                &kp COMMA             &kp PERIOD        &kp J
-&kp PRINTSCREEN    &windows_desktop_tap_dance  &none            &Tap_Layer 4 TAB     &Tap_Layer 3 ENTER  &kp SPACE  &smart_shift     &lt_sl 1 1           &lt_lock 2 2          &none             &kp LG(L)         &TopRightDance
+&kp PRINTSCREEN    &windows_desktop_tap_dance  &none            &lt_mouse 4 TAB      &Tap_Layer 3 ENTER  &kp SPACE  &smart_shift     &lt_sl 1 1           &lt_lock 2 2          &none             &kp LG(L)         &TopRightDance
             >;
         };
 
